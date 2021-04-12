@@ -3,6 +3,9 @@ import '../style/Scores.css';
 const Scores = (props) => {
     const [animationClassScore, setAnimationClassScore] = useState('');
     const [animationClassBestScore, setAnimationClassBestScore] = useState('');
+    const [message, setMessage] = useState(
+        "Click any animal that you didn't click already"
+    );
     useEffect(() => {
         setAnimationClassScore('text-animation');
         setTimeout(() => {
@@ -28,6 +31,7 @@ const Scores = (props) => {
                 Score:
                 <span className={animationClassScore}> {props.score}</span>
             </div>
+            <div id="message">{message}</div>
         </div>
     );
 };

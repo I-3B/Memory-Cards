@@ -20,6 +20,27 @@
 span {
     transition: 0.25s;
 }
+#message {
+    color: yellowgreen;
+    margin: auto;
+    flex-grow: 1;
+    font-size: 0.7em;
+    text-align: center;
+    animation-name: fade;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+    z-index: 3;
+    padding: 0.5em;
+}
+
+@keyframes fade {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 @media screen and (max-width: 500px) {
     #scores {
