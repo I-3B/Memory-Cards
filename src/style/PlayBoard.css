@@ -1,0 +1,19 @@
+#play-board {
+    margin: 4em auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 500px) {
+    #play-board {
+        margin: auto;
+        padding: 0em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

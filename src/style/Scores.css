@@ -1,0 +1,28 @@
+#scores {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    min-height: 4rem;
+    color: rgb(115, 190, 255);
+    font-size: 2em;
+    position: sticky;
+    top: 0em;
+    right: 10em;
+    z-index: 2;
+}
+#scores div {
+    margin: auto 0.5em;
+}
+.text-animation {
+    color: yellowgreen;
+    font-size: 1.2em;
+}
+span {
+    transition: 0.25s;
+}
+
+@media screen and (max-width: 500px) {
+    #scores {
+        font-size: 1.3em;
+    }
+}
