@@ -21,15 +21,14 @@ const Scores = (props) => {
     return (
         <div id="scores">
             <div id="best-score">
-                HS:{' '}
+                <span>HS:</span>
                 <span className={animationClassBestScore}>
-                    {' '}
                     {props.bestScore}
                 </span>
             </div>
             <div id="current-score">
-                Score:
-                <span className={animationClassScore}> {props.score}</span>
+                <span>Score:</span>
+                <span className={animationClassScore}>{props.score}</span>
             </div>
             <div id="message">{message}</div>
         </div>

@@ -1,8 +1,8 @@
 #scores {
     display: flex;
     flex-direction: row-reverse;
-    width: 100vw;
-    min-height: 4rem;
+    width: 100%;
+    min-height: 4em;
     color: rgb(115, 190, 255);
     font-size: 2em;
     position: sticky;
@@ -11,13 +11,16 @@
     z-index: 2;
 }
 #scores div {
-    margin: auto 0.5em;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: row;
 }
 .text-animation {
     color: yellowgreen;
     font-size: 1.2em;
 }
 span {
+    margin: 0em 5px;
     transition: 0.25s;
 }
 #message {
@@ -45,5 +48,13 @@ span {
 @media screen and (max-width: 500px) {
     #scores {
         font-size: 1.3em;
+        max-height: 1em;
+        width: 100%;
+        right: 0em;
+    }
+    #scores div {
+        margin: 0.5em;
+        display: flex;
+        flex-direction: row;
     }
 }

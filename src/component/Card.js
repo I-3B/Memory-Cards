@@ -4,7 +4,7 @@ const Card = (props) => {
     const [cardClicked, setCardClicked] = useState(false);
     return (
         <div
-            id="card"
+            className="card"
             onClick={() => {
                 props.isCardClickedAlready(cardClicked);
                 setCardClicked(true);
