@@ -1,6 +1,6 @@
 #play-board {
-    margin: 4em auto;
-    width: fit-content;
+    margin: auto;
+    width: 80vw;
     height: fit-content;
     padding: 3em;
     display: flex;
