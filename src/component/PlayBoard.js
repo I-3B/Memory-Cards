@@ -3,23 +3,27 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import uniqid from 'uniqid';
 const CARDS_MAX_SIZE = 48;
+const CARDS_START_SIZE=4;
 const PlayBoard = (props) => {
     const [cardCounter, setCardCounter] = useState(0);
     const [totalCardCounter, setTotalCardCounter] = useState(0);
-    const [cardsSize, setCardsSize] = useState(4);
+    const [cardsSize, setCardsSize] = useState(CARDS_START_SIZE);
     const [cards, setCards] = useState([]);
+
     const gameOver = () => {
         setCardCounter(0);
         setTotalCardCounter(0);
-        setCardsSize(4);
-        setCards(getNewCards(4));
+        setCardsSize(CARDS_START_SIZE);
+        setCards(getNewCards(CARDS_START_SIZE));
     };
+
     const shuffleCards = (cards) => {
         for (let i = cards.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [cards[i], cards[j]] = [cards[j], cards[i]];
         }
     };
+
     const isCardClickedAlreadyCallback = (cardBoolean) => {
         if (cardBoolean) gameOver();
         else {
@@ -27,6 +31,7 @@ const PlayBoard = (props) => {
             setTotalCardCounter((totalCardCounter) => totalCardCounter + 1);
         }
     };
+
     const getNewCards = (cardsSize) => {
         let usedImages = [];
         let cards = [];
@@ -45,11 +50,13 @@ const PlayBoard = (props) => {
         }
         return cards;
     };
+
     const nextTurn = () => {
         setCardCounter(0);
         setCardsSize(Math.floor(cardsSize * 1.5));
         setCards(getNewCards(cardsSize));
     };
+
     useEffect(() => {
         setCards(getNewCards(cardsSize));
     }, []);
