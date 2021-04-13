@@ -23,6 +23,9 @@ span {
     margin: 0em 5px;
     transition: 0.25s;
 }
+#best-score span:first-child {
+    font-size: 0.9em;
+}
 #message {
     color: yellowgreen;
     margin: auto;

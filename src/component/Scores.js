@@ -21,7 +21,7 @@ const Scores = (props) => {
     return (
         <div id="scores">
             <div id="best-score">
-                <span>HS:</span>
+                <span>Best score:</span>
                 <span className={animationClassBestScore}>
                     {props.bestScore}
                 </span>
