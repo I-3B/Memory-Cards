@@ -34,13 +34,13 @@ span {
     text-align: center;
     animation-name: fade;
     animation-fill-mode: forwards;
-    animation-duration: 5s;
+    animation-duration: 10s;
     z-index: 3;
     padding: 0.5em;
 }
 
 @keyframes fade {
-    80% {
+    90% {
         opacity: 1;
     }
     100% {
